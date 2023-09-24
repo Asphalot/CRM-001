@@ -1,47 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>This is the main title </title>
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <style>
-      h1 {font-size: 46px;
-          font-family: Poppins;
-          font-weight: semi-bold;
-          color: #179bd7;
-         }
-      h2 {font-size: 32px;
-         font-family: Poppins;
-         font-weight: semi-bold;
-          color: #179bd7;
-         }
-      .bodytext{font-family: Poppins;
-               font-size: 12px
-               color: #000000}
-      #banner {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-      }
-      #container {max-width:720px;
-                  margin: 0 auto;
-                 }
-      
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>#banner {
+  height:360px;
+  width:100%;
+  object-fit:cover;
+                   } 
+    </style> 
   </head>
 
   <body> 
-    <div id=container>
-    <h1>Clients</h1>
-    <img id=banner src="https://crm-0001--mluoni7.repl.co/static/Picture Banner.jpg"
+    <div class="container">
+    <h1 class="text-center mt-4 mb-4">{{company_name}} Clients</h1>
+    <img id="banner" class="img-fluid" src="https://crm-0001--mluoni7.repl.co/static/Picture Banner.jpg"
     </img>
-    <h2>H2 title</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam neque quam, aliquam quis leo ac, porttitor fringilla sapien. Morbi dictum justo nec congue semper. Quisque nulla augue, maximus et tristique a, mattis non erat. Vestibulum nec dui malesuada, maximus sapien et, porttitor nunc. Aenean vel sapien sit amet nisi eleifend fermentum. Pellentesque dictum urna nisi. In nec libero mollis, molestie nunc sed, suscipit diam. Duis convallis, nulla sit amet consequat condimentum, diam ante fringilla est, sit amet laoreet magna diam quis justo.
+    <h2 class="text-center">{{company_name}} Coseee</h2>
+    <p class=“lead“>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam neque quam, aliquam quis leo ac, porttitor fringilla sapien. Morbi dictum justo nec congue semper. Quisque nulla augue, maximus et tristique a, mattis non erat. Vestibulum nec dui malesuada, maximus sapien et, porttitor nunc. Aenean vel sapien sit amet nisi eleifend fermentum. Pellentesque dictum urna nisi. In nec libero mollis, molestie nunc sed, suscipit diam. Duis convallis, nulla sit amet consequat condimentum, diam ante fringilla est, sit amet laoreet magna diam quis justo.
     </p>
-      <h2>Titolo 2 ma diverso</h2>
-      <p class="bodytext">Copyrightoneeeeeee</p>
-    <div style="text-align:center;">
-    <button>Bottone</button>
-      <p>Copyright</p>
+      <h2 class="text-center mt-4 mb-4">Titolo 2 ma diverso</h2>
+      <div>
+        {% for client in clients %}
+        {% include 'clientitem.html' %}
+        {% endfor %}
+      </div>
+    <div class="text-center">
+    <button class="btn btn-lg btn-primary">Bottone</button>
+      <p class="mt-4 mb-4">Copyright</p>
     </div>
   </body>
 </html>
