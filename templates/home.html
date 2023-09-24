@@ -14,11 +14,11 @@
   </head>
 
   <body> 
-    <div class="container">
-    <h1 class="text-center mt-4 mb-4">{{company_name}} Clients</h1>
+    {% include 'nav.html' %}
     <img id="banner" class="img-fluid" src="https://crm-0001--mluoni7.repl.co/static/Picture Banner.jpg"
     </img>
-    <h2 class="text-center">{{company_name}} Coseee</h2>
+    <div class="container">
+    <h1 class="text-center mt-4 mb-4">{{company_name}} Clients</h1>
     <p class=“lead“>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam neque quam, aliquam quis leo ac, porttitor fringilla sapien. Morbi dictum justo nec congue semper. Quisque nulla augue, maximus et tristique a, mattis non erat. Vestibulum nec dui malesuada, maximus sapien et, porttitor nunc. Aenean vel sapien sit amet nisi eleifend fermentum. Pellentesque dictum urna nisi. In nec libero mollis, molestie nunc sed, suscipit diam. Duis convallis, nulla sit amet consequat condimentum, diam ante fringilla est, sit amet laoreet magna diam quis justo.
     </p>
       <h2 class="text-center mt-4 mb-4">Titolo 2 ma diverso</h2>
@@ -29,7 +29,7 @@
       </div>
     <div class="text-center">
     <button class="btn btn-lg btn-primary">Bottone</button>
-      <p class="mt-4 mb-4">Copyright</p>
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
